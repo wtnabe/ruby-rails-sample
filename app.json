@@ -5,9 +5,7 @@
   "repository": "https://github.com/heroku/ruby-rails-sample",
   "logo": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
   
-  "scripts": {
-    "postdeploy": "bundle exec rake db:migrate"
-  },
+  "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
   "env": {
     "BUILDPACK_URL": "https://github.com/dpiddy/heroku-buildpack-ruby-minimal"
     "RAILS_ENV": "production",
@@ -20,5 +18,7 @@
             "required": "true"
     }
   },
-  "addons": ["heroku-postgresql:hobby-dev", "papertrail"]
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
 }
