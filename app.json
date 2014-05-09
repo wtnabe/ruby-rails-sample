@@ -4,11 +4,21 @@
   "website": "http://rubyonrails.org",
   "repository": "https://github.com/heroku/ruby-rails-sample",
   "logo": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
+  
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate"
   },
   "env": {
-    "RAILS_ENV": "production"
+    "BUILDPACK_URL": "https://github.com/dpiddy/heroku-buildpack-ruby-minimal"
+    "RAILS_ENV": "production",
+    "COOKIE_SECRET": {
+            "description": "This gets generated",
+            "generator": "secret"
+    },
+    "SETUP_BY": {
+            "description": "Who initiated this setup",
+            "required": "true"
+    }
   },
-  "addons": ["heroku-postgresql"]
+  "addons": ["heroku-postgresql:hobby-dev", "papertrail"]
 }
