@@ -7,7 +7,6 @@
   
   "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
   "env": {
-    "BUILDPACK_URL": "https://github.com/dpiddy/heroku-buildpack-ruby-minimal",
     "RAILS_ENV": "production",
     "COOKIE_SECRET": {
             "description": "This gets generated",
