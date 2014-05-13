@@ -16,7 +16,6 @@
             "description": "This gets generated",
             "generator": "secret"
     }
-    
   },
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate"
