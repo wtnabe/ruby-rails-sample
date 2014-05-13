@@ -8,6 +8,10 @@
   "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
   "env": {
     "RAILS_ENV": "production",
+    "SETUP_BY": {
+            "description": "Who initiated this setup",
+            "required": "true"
+    },
     "COOKIE_SECRET": {
             "description": "This gets generated",
             "generator": "secret"
