@@ -11,7 +11,8 @@
             "generator": "secret"
     },
     "SETUP_BY": {
-            "description": "Who initiated this setup"
+            "description": "Who initiated this setup",
+            "required": true
     }
   },
   "scripts": {
