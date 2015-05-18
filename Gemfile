@@ -6,6 +6,7 @@ gem 'rails', '~> 4.0.3'
 
 gem 'rails_12factor', group: :production
 gem 'unicorn'
+gem 'oneline_log_formatter'
 
 # Use postgresql as the database for Active Record
 gem 'pg'

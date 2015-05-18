@@ -28,4 +28,9 @@ RubyRailsSample::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+    config.middleware.use ExceptionNotification::Rack,
+      :slack => {
+        :webhook_url => "https://hooks.slack.com/services/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"
+      }
 end
