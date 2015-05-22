@@ -5,5 +5,6 @@ general:
 deployment:
   production:
     branch: master
-    heroku:
-      appname: wtnabe-rails-sample
+    commands:
+      - git push git@heroku.com:wtnabe-rails-sample.git $CIRCLE_SHA1:master
+      - heroku run rake db:migrate --app wtnabe-rails-sample
